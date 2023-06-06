@@ -1,0 +1,206 @@
+.client_profile {
+    padding: 0 2rem;
+
+
+@include breakpoint-up(xLarge) {
+        max-width: 60% !important;
+    }
+
+&--checkbox {
+    @include flex-row-reverse-end-center;
+        cursor: pointer;
+        // margin-top: 1rem;
+
+    & input {
+            cursor: pointer;
+        }
+
+    & label {
+            cursor: pointer;
+        @include breakpoint-up(xxSmall) {
+                white-space: nowrap;
+            }
+        }
+
+    & div {
+            margin-bottom: 0 !important;
+        }
+    }
+
+&--radiosAndChecks {
+    @include flex-start-center;
+
+    & strong {
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+    @include breakpoint-down(xSmall) {
+        @include flex-column;
+            align-items: flex-start !important;
+        }
+
+    & input {
+            margin-left: 20px;
+        }
+    }
+
+&--tags {
+        display: inline-block;
+        background-color: $ethera-gray-dark;
+        margin: 0.5rem 0;
+        padding: 0.7rem 2rem;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    & span {
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: $gray-800;
+        }
+    }
+
+&--addressTag {
+    @include flex-start-center;
+
+    & p {
+            margin-bottom: 0;
+            font-size: 12px;
+            margin-left: 20px;
+        }
+
+    @include breakpoint-down(large) {
+            flex-direction: column;
+            align-items: flex-start;
+
+        & p {
+                margin-left: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+&--datePicker {
+    @include flex-start-center;
+    @include flex-row;
+
+    @include breakpoint-down(med) {
+        }
+    }
+
+&--age {
+        display: inline-block;
+        background-color: $ethera-gray-dark;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        margin-top: 1rem;
+        margin-left: 20px;
+        x & span {
+            white-space: nowrap;
+        }
+    }
+
+&--doubleCol {
+        display: flex;
+        flex-wrap: wrap;
+
+    &__50 {
+            min-width: 50%;
+
+        @include breakpoint-down(xSmall) {
+                min-width: 100%;
+            }
+        }
+
+    &__20 {
+            min-width: 20%;
+
+        @include breakpoint-down(xSmall) {
+                min-width: 100%;
+            }
+        }
+    }
+
+&--billingType {
+    & p {
+            margin: 0;
+        }
+    & span {
+            font-size: 10px;
+        }
+    }
+
+&--insuranceInformation {
+        display: flex;
+
+    @include breakpoint-down(med) {
+        @include flex-column;
+        }
+    }
+
+&--clientDefaultService {
+        background-color: $ethera-income-head;
+        position: relative;
+        margin-top: 4rem;
+        width: 95%;
+        padding: 1.5rem;
+        margin-left: 1rem;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+
+        border-top-left-radius: 0 !important;
+
+    &__head {
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            background-color: $ethera-gray-dark;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            position: absolute;
+            left: 0;
+            top: -33px;
+        }
+    }
+
+&--defaultServiceForm {
+    @include flex-center;
+    @include flex-column;
+
+    &:last-child {
+            margin-bottom: 1rem;
+        }
+
+    @include breakpoint-up(xxxSmall) {
+        @include flex-row;
+            justify-content: space-between;
+        }
+    }
+
+&--submission {
+    @include flex-start-center;
+
+    @include breakpoint-up(med) {
+        @include flex-center;
+        }
+
+    & button {
+            margin: 0px 10px;
+        }
+    }
+
+&--licenseList {
+    & .trashLeft {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+}

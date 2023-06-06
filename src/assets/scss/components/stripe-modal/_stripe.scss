@@ -1,0 +1,387 @@
+@import "../../utils/mixins";
+
+.ModalDialoge {
+  margin: auto;
+  margin-top: 8rem;
+  justify-content: center;
+
+  .ModalHeader {
+    background-color: $white;
+    padding-left: 2rem;
+    font-weight: bold !important;
+    display: flex !important;
+  }
+  .modal-title {
+    display: contents;
+  }
+  .modalBody {
+    padding: 1rem 2rem !important;
+    .ChargeDetails {
+      font-size: 11px;
+      padding-top: 0.2rem;
+      padding-left: 0.3rem;
+    }
+    .ModalLabel {
+      padding-left: 1rem;
+      padding-top: 0.8rem;
+    }
+    .ModalInput {
+      border-radius: 25px;
+      font-size: 10px;
+    }
+  }
+  .ModalFooter {
+    border: none;
+
+    .ModalAdd {
+      background-color: #79a5ca !important;
+      padding: 0.4rem 1.8rem;
+      border: none !important;
+    }
+  }
+}
+.modal-paynow {
+  max-width: 47rem;
+}
+.payment-modal-footer {
+  display: none;
+}
+.edit-payment-sm {
+  display: none;
+}
+.fw-bold {
+  font-weight: bold !important;
+}
+.fs-22 {
+  font-size: 22px;
+}
+.float-right {
+  float: right !important;
+}
+@include breakpoint-down(large) {
+ .sm-label-margin-top {
+  margin-top: 1rem;
+ }
+}
+
+.secondary-btn {
+  background-color: #fff9ef !important;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid rgba(#924511, 0.6) !important;
+  margin-left: 1rem;
+  @include breakpoint-down(large) {
+    margin-left: 0rem;
+  }
+  margin-top: 1rem;
+  color: $black !important;
+  white-space: nowrap;
+  width: fit-content;
+  &::before {
+    content: "+";
+    margin-left: -9px;
+    font-size: 12px;
+    border-radius: 50%;
+    margin-right: 0.1rem;
+    left: 0 !important;
+    font-weight: bold;
+    position: relative;
+    padding: 0.2rem 0.4rem;
+  }
+}
+.secondary-btn:focus,
+.secondary-btn:active,
+.secondary-btn.active {
+  background-color: #fff9ef !important;
+}
+.stripe-input {
+  font-size: 11px;
+  padding: 0.5rem;
+  border-radius: 25px;
+}
+.fs-11 {
+  font-size: 11px !important;
+}
+.client_profile--checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+// .client_profile-appointment--checkbox {
+//   display: flex;
+//   flex-direction: row-reverse;
+//   align-items: center;
+//   justify-content: flex-end;
+// }
+.reqbgColor {
+  background-color: #699577 !important;
+  border: none !important ;
+}
+.reqbgColor:focus,
+.reqbgColor:active,
+.reqbgColor.active {
+  background-color: #699577 !important;
+  border: none !important ;
+}
+
+.saved_card_elements {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  width: -webkit-fill-available;
+
+  @include flex-between-center;
+
+  & svg {
+    margin-left: 5px;
+    margin-right: 15px;
+  }
+
+  &--card {
+    @include flex-start-center;
+    .sm-d-flex {
+      display: flex;
+    }
+  }
+
+  &--radio {
+    margin: 0 !important;
+  }
+
+  &--cardExpiry {
+    width: fit-content;
+    direction: rtl;
+    & input {
+      max-width: 50px !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+
+      @include breakpoint-down(xxSmall) {
+        width: 35px;
+      }
+    }
+  }
+  &--default-badge {
+    white-space: nowrap;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    font-size: 7px;
+    border: 0.5px solid #444;
+    color: $black;
+    // margin-left: 10px;
+    // direction: rtl;
+  }
+
+  &--cardNumber {
+    margin-bottom: 0 !important;
+    & input {
+      background-color: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      color: #b5b5b5 !important;
+      font-size: 14px;
+
+      @include breakpoint-down(xxSmall) {
+        font-size: 8px;
+      }
+
+      &:last-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.payment-trash-btn {
+  background-color: #db8886;
+  padding: 0.2rem 0.7rem;
+  border-radius: 24px;
+  margin-left: 10px;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+.delete-modal-body {
+  padding: 1.4rem 6rem !important;
+  .payment-delete-btn {
+    background-color: #db8886 !important;
+    border: none;
+    color: #803a39 !important;
+    font-weight: bold;
+  }
+  .payment-cancel-btn {
+    background-color: #dfdfdf !important;
+    border: none;
+    color: #000 !important;
+  }
+}
+.sm-block-preview {
+  display: none;
+}
+.lg-none-preview {
+  display: none !important;
+}
+
+@media screen and (max-width: 450px) {
+  .ModalCancel {
+    padding: 0.7rem 1.4rem;
+  }
+  .payment-modal-footer {
+    display: block;
+    justify-content: flex-start !important;
+    border: none !important;
+    Button {
+      margin-left: 0 !important;
+    }
+  }
+  .secondary-btn {
+    margin-left: 0 !important;
+  }
+  .payment-checkbox {
+    display: grid !important;
+    margin-top: 0.3rem;
+
+    & div:last-child {
+      @include breakpoint-down(xxSmall) {
+        padding-left: 1rem;
+      }
+    }
+  }
+  .client_profile--checkbox {
+    margin-top: 0rem !important;
+  }
+  
+  .ModalCancel {
+    padding: 0.7rem 1.4rem;
+  }
+  .payment-box-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    float: left !important;
+    width: 100%;
+    .ModalAdd {
+      width: 100%;
+      margin-left: 0;
+      padding: 0.7rem 2rem !important ;
+    }
+    .ModalCancel {
+      width: fit-content;
+      margin: auto;
+      margin-top: 1rem;
+      background-color: #dfdfdf !important;
+      color: #555 !important;
+      border: none !important;
+    }
+  }
+  .payment-detail-btn {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    .reqbgColor {
+      margin-left: 0;
+      padding: 0.7rem 1rem;
+      margin-bottom: 1rem;
+    }
+    .ModalCancel {
+      width: fit-content;
+      margin: auto;
+
+      background-color: #dfdfdf !important;
+      color: #555 !important;
+      border: none !important;
+    }
+  }
+  .ModalDialoge .ModalFooter-pay .ModalAdd {
+    width: 100%;
+    background-color: #79a5ca !important;
+    padding: 0.9rem 1.5rem;
+    border: none !important;
+  }
+  .payment-box-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    float: left !important;
+    width: 100%;
+    .ModalAdd {
+      width: 100%;
+      margin-left: 0;
+      padding: 0.7rem 2rem !important ;
+    }
+    .ModalCancel {
+      width: fit-content;
+      margin: auto;
+      margin-top: 1rem;
+      background-color: #dfdfdf !important;
+      color: #555 !important;
+      border: none !important;
+    }
+  }
+  .saved_card_elements {
+    position: relative;
+    align-items: end;
+
+    & svg {
+      margin-left: 0.6rem;
+    }
+
+    &--card {
+      display: block;
+      .sm-d-flex {
+        display: flex;
+      }
+    }
+    &--sm-default-box {
+      position: absolute;
+      top: -1px;
+      right: 6%;
+    }
+
+    &--radio {
+      margin: 0 !important;
+    }
+
+    &--cardExpiry {
+      & input {
+        @include breakpoint-down(xxSmall) {
+        }
+      }
+    }
+    &--default-badge {
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      padding: 0.2rem 0.8rem;
+      font-size: 10.5px;
+    }
+
+    &--cardNumber {
+      padding-left: 0.7rem;
+      margin-top: 0.5rem;
+      & input {
+        @include breakpoint-down(xxSmall) {
+          font-size: 10px;
+        }
+
+        &:last-child {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .ModalCancel {
+    margin: 0 1rem !important;
+  }
+}
+
+.modal-delete {
+  @include breakpoint-up(med) {
+    min-width: 600px !important;
+  }
+}
+
+.mrgin-top {
+  margin-top: 1.3rem !important;
+}

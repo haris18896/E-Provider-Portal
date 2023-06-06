@@ -1,0 +1,79 @@
+.bookings-header {
+  @include flex-center-start;
+  @include flex-column;
+
+  @include breakpoint-up(small) {
+    @include column-reverse;
+  }
+
+  &--left {
+    @include flex-center-start;
+    @include flex-column;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @include breakpoint-up(xxSmall) {
+      @include flex-row;
+
+      & button {
+        margin-left: 1rem;
+      }
+    }
+
+    & button {
+      width: 100%;
+    }
+
+    &__calendar {
+      width: 100%;
+      margin-bottom: 1rem;
+
+      @include breakpoint-up(xSmall) {
+        padding-right: 0.7rem;
+      }
+    }
+  }
+
+  &--selects {
+    @include flex-stretch-center;
+    @include flex-column;
+    width: -webkit-fill-available;
+    gap: 0.5rem;
+    @include breakpoint-up(small) {
+      @include flex-row;
+      justify-content: space-between;
+    }
+
+    @include breakpoint-up (large) {
+        margin-bottom: 1rem;
+    }
+
+    @include breakpoint-up(large11) {
+      width: fit-content;
+      margin-bottom: 0;
+
+      // & div {
+      //   max-width: 200px;
+      // }
+    }
+  }
+
+  @include breakpoint-up(large11) {
+    @include flex-row;
+    align-items: center;
+
+    &--left {
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 0;
+        &__calendar {
+            margin-bottom: 0;
+            width: fit-content;
+        }
+
+        & button {
+            width: fit-content;
+        }
+    }
+  }
+}

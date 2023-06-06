@@ -1,0 +1,249 @@
+.service-name {
+  display: inline-block;
+  width: 170px; /* Adjust this width value to your liking */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include breakpoint-down(xSmall) {
+    width: 115px;
+  }
+}
+
+.Appointment_Form {
+  overflow-x: hidden !important;
+
+  &--y-scroll {
+    overflow-y: auto !important;
+  }
+
+  & button {
+    padding: 0.5rem 2rem !important;
+    font-size: $font-size-md !important;
+  }
+
+  &--repeats {
+    @include breakpoint-down(xSmall) {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+  }
+
+  &--modal_padding {
+    @include appointment-form-padding;
+  }
+
+  &--radio_div {
+    @include flex-start-center;
+    margin-left: 10px;
+  }
+
+  &--roomCost {
+    @include flex-between-center;
+    margin-bottom: 1rem;
+    padding: 0 !important;
+
+    & h5 {
+      padding-left: 1.421rem;
+      font-weight: 700;
+    }
+
+    & p {
+      padding: 0.3rem 2.5rem 0.3rem 1rem;
+      background-color: $ethera-show;
+      font-weight: 700;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  &--client {
+    &__radios {
+      @include flex-start-center;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      & span {
+        padding: 0.5rem 2rem;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        cursor: pointer;
+      }
+
+      &__active {
+        background-color: $ethera-yellow-light;
+        border: 1px solid $ethera-yellow-border;
+      }
+    }
+  }
+
+  &--description {
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: $font-size-sm;
+  }
+
+  &--addClient {
+    @include appointment-form-padding;
+
+    &__saveClient {
+      @include flex-end-center;
+    }
+  }
+
+  &--clientsDetails {
+    &__date {
+      display: flex;
+      align-items: center;
+
+      & h5 {
+        margin: 2px 8px;
+      }
+
+      & input:not(:last-child) {
+        min-width: 90px;
+      }
+
+      & input:last-child {
+        margin-left: 10px;
+      }
+
+      &--checkbox {
+        width: fit-content !important;
+      }
+
+      @include breakpoint-down(xSmall) {
+        //flex-direction: column !important;
+        flex-wrap: wrap;
+        & input:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__teleHealth {
+      @include flex-between-center;
+
+      &--icons {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &--reports {
+    @include flex-between-center;
+  }
+
+  &--dateSelect {
+    @include flex-between-center;
+
+    & span {
+      white-space: nowrap;
+      font-size: $font-size-sm;
+      font-weight: 700;
+    }
+
+    & input {
+      max-width: 200px;
+    }
+  }
+
+  &--weeklyRepeat {
+    &__repeats {
+      border: 1px solid rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+      padding: 0.6rem 1rem;
+
+      @include breakpoint-down(xSmall) {
+        flex-wrap: wrap !important;
+
+        & div {
+          margin-top: 5px;
+          width: 100% !important;
+
+          & select {
+            width: -webkit-fill-available;
+          }
+        }
+      }
+
+      & p {
+        width: 1.7rem;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 50px;
+      }
+
+      &__active {
+        border: 2px solid $ethera-text-color !important;
+      }
+
+      & span {
+        font-size: $font-size-xs;
+
+        & svg {
+          color: $ethera-text-color;
+          background-color: #e9e9e9;
+          padding: 4px;
+          font-weight: bold;
+          border-radius: 20px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          -o-border-radius: 20px;
+          margin-left: 4px;
+        }
+      }
+
+      & div {
+        width: 65px;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &__date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      & div {
+        padding: 0.3rem 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+
+        & span {
+          font-size: $font-size-xs;
+        }
+
+        & strong {
+          font-size: $font-size-xs;
+        }
+
+        & svg {
+          margin-left: 50px;
+          color: #8b4719;
+          @include breakpoint-down(xSmall) {
+            margin-left: 5px !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.button-green {
+  background-color: $button-green !important;
+  padding: $button-green-padding !important;
+  border: none !important;
+  position: relative;
+
+  &:active {
+    background-color: $button-green !important;
+  }
+  &:focus {
+    background-color: $button-green !important;
+  }
+
+  &::before {
+    content: '+';
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    background-color: #fff;
+    color: $button-green;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+}
+
+.badge-button {
+  padding: 8px 20px !important;
+  background: #d0d8e5 !important;
+  border: none;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  -ms-border-radius: 20px !important;
+  -o-border-radius: 20px !important;
+}
+
+.btn-green-large {
+  background-color: $button-green !important;
+  color: $white;
+  border: none !important;
+  text-align: center !important;
+  width: 100%;
+
+  &:active {
+    background-color: $button-green !important;
+  }
+  &:focus {
+    background-color: $button-green !important;
+  }
+
+  & span {
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+
+  @include breakpoint-down(med) {
+    margin-bottom: 1rem;
+  }
+}
+.button-update-color {
+  background-color: $button-green !important;
+  padding: $button-green-padding !important;
+  border: none !important;
+  position: relative;
+  &:active {
+    background-color: $button-green !important;
+  }
+  &:focus {
+    background-color: $button-green !important;
+  }
+}

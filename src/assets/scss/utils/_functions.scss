@@ -1,0 +1,104 @@
+// margin-left
+@mixin leftMargins {
+  @for $i from 1 through 15 {
+    .ml-#{$i} {
+      margin-left: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin left_Margins {
+  @for $i from 1 through 100 {
+    .m-l-#{$i} {
+      margin-left: $i * 1px !important;
+    }
+  }
+}
+
+@mixin minHeight {
+  @for $i from 1 through 20 {
+    .min-h-#{$i} {
+      min-height: $i * 10px !important;
+    }
+  }
+}
+
+@mixin marginBottom {
+  @for $i from 0 through 100 {
+    .m-b-#{$i} {
+      margin-bottom: $i * 1px !important;
+    }
+  }
+}
+
+@mixin marginTop {
+  @for $i from 0 through 100 {
+    .m-t-#{$i} {
+      margin-top: $i * 1px !important;
+    }
+  }
+}
+
+// paddings
+@mixin leftPaddings {
+  @for $i from 1 through 15 {
+    .pl-#{$i} {
+      padding-left: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin left_Paddings {
+  @for $i from 1 through 100 {
+    .p-l-#{$i} {
+      padding-left: $i * 1px !important;
+    }
+  }
+}
+
+@mixin rightPaddings {
+  @for $i from 1 through 15 {
+    .pr-#{$i} {
+      padding-left: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin paddingHorizontal {
+  @for $i from 0 through 100 {
+    .ph-#{$i} {
+      padding-left: $i * 1px !important;
+      padding-right: $i * 1px !important;
+    }
+  }
+}
+
+@mixin paddingVertical {
+  @for $i from 0 through 100 {
+    .pv-#{$i} {
+      padding-top: $i * 1px !important;
+      padding-bottom: $i * 1px !important;
+    }
+  }
+}
+
+@mixin rounded {
+  @for $i from 0 through 500 {
+    .br-#{$i} {
+      border-radius: $i * 1px !important;
+    }
+  }
+}
+
+// Execute the mixins
+@include minHeight;
+@include marginTop;
+@include leftMargins;
+@include left_Margins;
+@include marginBottom;
+@include rightPaddings;
+@include leftPaddings;
+@include left_Paddings;
+@include paddingHorizontal;
+@include paddingVertical;
+@include rounded;
